@@ -23,7 +23,7 @@ RUN poetry install --without dev --no-root && rm -rf $POETRY_CACHE_DIR
 # Download language model. Can be changed to a different model via config or env variable
 RUN poetry run python -m spacy download ${LANGUAGE_MODEL}
 
-FROM python:3.11.3-slim-bullseye as runtime
+FROM python:3.6 as runtime
 
 ENV VIRTUAL_ENV=/app/.venv \
     PATH="/app/.venv/bin:$PATH"
