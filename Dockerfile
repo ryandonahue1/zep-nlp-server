@@ -12,7 +12,7 @@ ENV \
     POETRY_NO_INTERACTION=1 \
     POETRY_CACHE_DIR=/tmp/poetry_cache
 
-RUN pip install poetry==1.5.1
+RUN pip install poetry
 RUN pip install blackstone
 RUN pip install https://blackstone-model.s3-eu-west-1.amazonaws.com/en_blackstone_proto-0.0.1.tar.gz
 WORKDIR /app
