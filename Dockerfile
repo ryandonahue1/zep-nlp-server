@@ -1,4 +1,4 @@
-FROM python:3.11.3-bullseye as builder
+FROM python:3.6 as builder
 
 ENV WEB_CONCURRENCY 2
 ENV LANGUAGE_MODEL en_core_web_sm
